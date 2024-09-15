@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Civil Debate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added Meta Tag -->
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Civil Debate</h1>
+        <button id="theme-toggle" aria-label="Toggle Dark Mode">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+
+    <div id="name-entry" class="modal">
+        <div class="modal-content">
+            <h2>Enter Your Name</h2>
+            <input type="text" id="username" placeholder="Your Name">
+            <button id="save-name"><i class="fas fa-arrow-right"></i> Start</button>
+        </div>
+    </div>
+
+    <div id="main-content" style="display:none;">
+        <section id="topics-section">
+            <h2>Active Debate Topics</h2>
+            <ul id="topics-list"></ul>
+            <h3>Create New Topic</h3>
+            <div class="input-group">
+                <input type="text" id="new-topic" placeholder="Topic Title">
+                <button id="create-topic"><i class="fas fa-plus"></i> Create</button>
+            </div>
+        </section>
+
+        <section id="debate-section" style="display:none;">
+            <div class="debate-header">
+                <h2 id="debate-title"></h2>
+                <div id="debate-actions">
+                    <button id="leave-debate" style="display:none;" title="Leave Debate"><i class="fas fa-sign-out-alt"></i></button>
+                    <button id="download-chat" style="display:none;" title="Download Conversation"><i class="fas fa-download"></i></button>
+                </div>
+            </div>
+
+            <div id="user-lists">
+                <div class="user-list">
+                    <h3><i class="fas fa-thumbs-up"></i> For</h3>
+                    <ul id="for-users"></ul>
+                </div>
+                <div class="user-list">
+                    <h3><i class="fas fa-thumbs-down"></i> Against</h3>
+                    <ul id="against-users"></ul>
+                </div>
+            </div>
+
+            <div id="choose-side" style="display:none;">
+                <h3>Select Your Side</h3>
+                <div class="buttons-group">
+                    <button id="for-button" class="side-btn for-btn"><i class="fas fa-thumbs-up"></i> For</button>
+                    <button id="against-button" class="side-btn against-btn"><i class="fas fa-thumbs-down"></i> Against</button>
+                </div>
+            </div>
+
+            <div id="chat-section" style="display:none;">
+                <div id="chat-box"></div>
+                <div class="input-group">
+                    <input type="text" id="chat-input" placeholder="Enter your argument">
+                    <button id="send-chat"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
