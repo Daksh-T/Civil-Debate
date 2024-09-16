@@ -16,6 +16,7 @@ Civil Debate uses **Llama 3.1 70B** to serve as a civility layer: it rephrases a
 2. Set GROQ_API_KEY environment variable
 * `export GROQ_API_KEY='your-api-key'` on Unix/macOS
 * `$env:GROQ_API_KEY = 'your-api-key'` on Windows (PowerShell)
+<br> (Get Groq API key from here: https://console.groq.com/keys)
 3. Navigate to backend directory by running `cd backend`
 4. Install requirements by running `pip install -r requirements.txt`
 5. Run the app using `uvicorn main:app --reload`
