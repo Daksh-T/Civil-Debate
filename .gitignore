@@ -1,3 +1,5 @@
 .venv/
 backend/__pycache__
 backend/debate.db
+venv/
+.env
